@@ -1,0 +1,22 @@
+.Logo {
+    position: fixed;
+    z-index: 999;
+    top: var(--logo-spacing);
+    padding: var(--logo-spacing);
+    width: var(--logo-width);
+    height: var(--logo-height);
+    border-radius: 50%;
+    background-color: var(--alternate-color);
+}
+
+.Title {
+    margin: 2rem 0;
+    font-size: 4vw;
+    color: var(--main-color);
+    * {
+        margin-bottom: 0.5rem;
+    }
+    small {
+        text-transform: uppercase;
+    }
+}

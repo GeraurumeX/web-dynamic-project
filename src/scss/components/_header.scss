@@ -1,0 +1,43 @@
+.Header {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    padding: 0.5rem;
+    padding-top: var(--header-height);
+    margin-left: -100vw;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--second-color);
+    &.is-active {
+        margin-left: 0;
+    }
+    &-btn {
+        position: fixed;
+        z-index: 999;
+        top: var(--logo-spacing);
+        right: var(--logo-spacing);
+        display: flex;
+        width: var(--logo-width);
+        height: var(--logoheight);
+        overflow-y: auto;
+        background-color: var(--second-color);
+        transition: margin-left 0.33 ease;
+        @include mq(m) {
+            display: none;
+        }
+        & {
+            &.hamburger:focus {
+                outline: 0;
+                border: 0;
+            }
+            .hamburger {
+                &-inner,
+                &-inner:after,
+                &-inner:before {
+                    background-color: var(--link-color);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
